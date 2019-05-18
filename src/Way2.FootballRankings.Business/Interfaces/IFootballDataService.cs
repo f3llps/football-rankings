@@ -7,6 +7,6 @@ namespace Way2.FootballRankings.Business.Interfaces
 {
     public interface IFootballDataService
     {
-         Task<HttpResponseMessage>  ObterTodasCompeticoesAsync();
+         Task<IEnumerable<Competition>>  ObterTodasCompeticoes();
     }
 }
