@@ -2,7 +2,7 @@
 
 namespace Way2.FootballRankings.Business.Models
 {
-    class Standings
+    public class Standings
     {
         public string Stage { get; set; }
         public string Total { get; set; }

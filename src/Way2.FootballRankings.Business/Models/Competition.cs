@@ -5,7 +5,7 @@ namespace Way2.FootballRankings.Business.Models
     public class Competition
     {
         public int Id { get; set; }
-        public Area Area { get; set; }
+        public Area area { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
         public string EmblemUrl { get; set; }
