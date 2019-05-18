@@ -2,7 +2,7 @@
 
 namespace Way2.FootballRankings.Business.Models
 {
-    class CurrentSeason
+    public class CurrentSeason
     {
         public int Id { get; set; }
         public DateTime StartDate { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Way2.FootballRankings.Business.Models
 {
-    class Competition
+    public class Competition
     {
         public int Id { get; set; }
         public Area Area { get; set; }

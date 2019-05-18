@@ -1,6 +1,6 @@
 ﻿namespace Way2.FootballRankings.Business.Models
 {
-    class TeamClassification
+    public class TeamStandings
     {
         public int Position { get; set; }
         public Team Team { get; set; }
