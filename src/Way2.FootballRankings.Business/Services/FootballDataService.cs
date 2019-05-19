@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -11,15 +12,22 @@ namespace Way2.FootballRankings.Business.Services
     public class FootballDataService : IFootballDataService
     {
         private const string URL = "https://api.football-data.org/v2";
+        private const string COMPETITION_PARAM = "/competitions";
+        private const string STANDINGS_PARAM = "/standings";
+
+        private IConfiguration Configuration { get; set; }
+        private HttpClient client = new HttpClient();
+
+        public FootballDataService(IConfiguration configuration)
+        {
+            client.DefaultRequestHeaders.Add("X-Auth-Token", configuration["Tokens:FootballDataServiceToken"]);
+        }
 
         public async Task<Standings> ObterClassificacaoPorCompeticao(int competicaoId)
         {
-            const string PARAM = "/competitions/";
-            const string PARAM2 = "/standings";
             const string FILTER = "?standingType=TOTAL";
 
-            var client = new HttpClient();
-            var response = await client.GetAsync($"{URL}{PARAM}{competicaoId.ToString()}{PARAM2}{FILTER}");
+            var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}/{competicaoId.ToString()}{STANDINGS_PARAM}{FILTER}");
             var standings = new Standings();
             if (response.StatusCode.Equals(HttpStatusCode.OK))
             {
@@ -32,11 +40,9 @@ namespace Way2.FootballRankings.Business.Services
 
         public async Task<Competition> ObterCompeticaoPorId(int competicaoId)
         {
-            const string PARAM = "/competitions";
             const string FILTER = "?id=";
 
-            var client = new HttpClient();
-            var response = await client.GetAsync($"{URL}{PARAM}{FILTER}{competicaoId.ToString()}");
+            var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}{FILTER}{competicaoId.ToString()}");
             var competition = new Competition();
             if (response.StatusCode.Equals(HttpStatusCode.OK))
             {
@@ -49,10 +55,7 @@ namespace Way2.FootballRankings.Business.Services
 
         public async Task<IEnumerable<Competition>> ObterTodasCompeticoes()
         {
-            const string PARAM = "/competitions";
-
-            var client = new HttpClient();
-            var response = await client.GetAsync($"{URL}{PARAM}");
+            var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}");
             var listOfCompetitons = new ListOfCompetitions();
             if (response.StatusCode.Equals(HttpStatusCode.OK))
             {
