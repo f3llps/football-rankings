@@ -1,12 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using Way2.FootballRankings.Api.ViewModels;
-using Way2.FootballRankings.Business.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Way2.FootballRankings.Api.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
     public abstract class MainController : ControllerBase
     {
