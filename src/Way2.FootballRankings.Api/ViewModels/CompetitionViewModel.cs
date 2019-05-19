@@ -7,6 +7,7 @@ namespace Way2.FootballRankings.Api.ViewModels
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        public AreaViewModel Area { get; set; }
         public string LastUpdated { get; set; }
     }
 }
