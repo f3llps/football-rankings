@@ -35,6 +35,7 @@ namespace Way2.FootballRankings.Api
                 });
             });
 
+            services.WebApiConfig();
 
             services.ResolveDependencies();
 
@@ -43,24 +44,13 @@ namespace Way2.FootballRankings.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
             app.UseSwagger();
             app.UseSwaggerUI(s =>
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "API FootballRankings");
             });
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseMvcConfig(env);
         }
-}
+    }
 }
