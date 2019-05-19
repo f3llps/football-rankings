@@ -7,7 +7,6 @@ using Way2.FootballRankings.Business.Interfaces;
 
 namespace Way2.FootballRankings.Api.Controllers
 {
-    [Route("api/competitions")]
     public class CompetitionController : MainController
     {
         private readonly IFootballDataService _footballDataService;
@@ -40,17 +39,5 @@ namespace Way2.FootballRankings.Api.Controllers
 
             return Ok(competicao);
         }
-
-        [HttpGet("{competicaoId:int}")]
-        public async Task<ActionResult<CompetitionViewModel>> ObterClassificacaoPorCompeticao(int competicaoId)
-        {
-            var classificacao = _mapper.Map<CompetitionViewModel>(await _footballDataService.ObterClassificacaoPorCompeticao(competicaoId));
-
-            if (classificacao == null)
-                return NotFound();
-
-            return Ok(classificacao);
-        }
-
     }
 }
