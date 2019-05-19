@@ -8,6 +8,6 @@ namespace Way2.FootballRankings.Business.Interfaces
     {
         Task<IEnumerable<Competition>> ObterTodasCompeticoes();
         Task<Competition> ObterCompeticaoPorId(int competicaoId);
-        Task<Standings> ObterClassificacaoPorCompeticao(int competicaoId);
+        Task<RootObjectToStandings> ObterClassificacaoPorCompeticao(int competicaoId);
     }
 }

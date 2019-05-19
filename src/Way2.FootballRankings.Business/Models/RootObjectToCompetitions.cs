@@ -2,7 +2,7 @@
 
 namespace Way2.FootballRankings.Business.Models
 {
-    public class ListOfCompetitions
+    public class RootObjectToCompetitions
     {
         public List<Competition> competitions { get; set; } = new List<Competition>();
     }

@@ -10,7 +10,7 @@ namespace Way2.FootballRankings.Tests.Services
         private readonly FootballDataService _footballDataService;
 
         public FootballDataServiceTests()
-        {
+        {          
             _footballDataService = new FootballDataService();
         }
 

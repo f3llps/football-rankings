@@ -19,22 +19,25 @@ namespace Way2.FootballRankings.Business.Services
         private IConfiguration Configuration { get; set; }
         private static readonly HttpClient client = new HttpClient();
 
+        public FootballDataService(){}
+
         public FootballDataService(IConfiguration configuration)
         {
             if (!client.DefaultRequestHeaders.Any())
                 client.DefaultRequestHeaders.Add("X-Auth-Token", configuration["Tokens:FootballDataServiceToken"]);
         }
 
-        public async Task<Standings> ObterClassificacaoPorCompeticao(int competicaoId)
+        public async Task<RootObjectToStandings> ObterClassificacaoPorCompeticao(int competicaoId)
+
         {
             const string FILTER = "?standingType=TOTAL";
 
             var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}/{competicaoId.ToString()}{STANDINGS_PARAM}{FILTER}");
-            var standings = new Standings();
+            var standings = new RootObjectToStandings();
             if (response.StatusCode.Equals(HttpStatusCode.OK))
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
-                standings = Newtonsoft.Json.JsonConvert.DeserializeObject<Standings>(jsonString);
+                standings = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObjectToStandings>(jsonString);
             }
 
             return standings;
@@ -56,11 +59,11 @@ namespace Way2.FootballRankings.Business.Services
         public async Task<IEnumerable<Competition>> ObterTodasCompeticoes()
         {
             var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}");
-            var listOfCompetitons = new ListOfCompetitions();
+            var listOfCompetitons = new RootObjectToCompetitions();
             if (response.StatusCode.Equals(HttpStatusCode.OK))
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
-                listOfCompetitons = Newtonsoft.Json.JsonConvert.DeserializeObject<ListOfCompetitions>(jsonString);
+                listOfCompetitons = Newtonsoft.Json.JsonConvert.DeserializeObject<RootObjectToCompetitions>(jsonString);
             }
 
             return listOfCompetitons.competitions;

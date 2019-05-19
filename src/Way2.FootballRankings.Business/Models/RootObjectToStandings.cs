@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using Way2.FootballRankings.Business.Models;
 
-namespace Way2.FootballRankings.Api.ViewModels
+namespace Way2.FootballRankings.Business.Models
 {
-    public class StandingsViewModel
+    public class RootObjectToStandings
     {
         public Competition Competition { get; set; }
         public CurrentSeason Season { get; set; }

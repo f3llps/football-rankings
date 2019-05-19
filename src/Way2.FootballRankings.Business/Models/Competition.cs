@@ -13,5 +13,5 @@ namespace Way2.FootballRankings.Business.Models
         public CurrentSeason CurrentSeason { get; set; }
         public int NumberOfAvailableSeasons { get; set; }
         public DateTime LastUpdated { get; set; }
-    }
+   }
 }

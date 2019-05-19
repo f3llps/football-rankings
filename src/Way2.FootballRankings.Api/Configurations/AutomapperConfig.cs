@@ -11,7 +11,7 @@ namespace Way2.FootballRankings.Api.Configurations
             CreateMap<Competition, CompetitionViewModel>().ReverseMap();
             CreateMap<TeamStandings, TeamStandingsViewModel>().ReverseMap();
             CreateMap<Area, AreaViewModel>().ReverseMap();
-            CreateMap<Standings, StandingsViewModel>().ReverseMap();
+            CreateMap<RootObjectToStandings, StandingsViewModel>().ReverseMap();
             CreateMap<TeamStandings, TeamStandingsViewModel>().ReverseMap();
         }
     }
