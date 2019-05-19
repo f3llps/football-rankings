@@ -14,10 +14,9 @@ namespace Way2.FootballRankings.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(Startup));
+            services.AddMemoryCache();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.ResolveDependencies();
-            //services.AddOptions();
-            //services.Configure<AppSettings>(Configuration.GetSection("Tokens"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
