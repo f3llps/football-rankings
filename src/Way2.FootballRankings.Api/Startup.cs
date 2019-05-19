@@ -10,23 +10,14 @@ namespace Way2.FootballRankings.Api
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
-
-        public Startup(IHostingEnvironment env)
-        {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-
-            Configuration = builder.Build();
-        }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(Startup));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.ResolveDependencies();
+            //services.AddOptions();
+            //services.Configure<AppSettings>(Configuration.GetSection("Tokens"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
