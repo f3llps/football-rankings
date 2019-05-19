@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -16,11 +17,12 @@ namespace Way2.FootballRankings.Business.Services
         private const string STANDINGS_PARAM = "/standings";
 
         private IConfiguration Configuration { get; set; }
-        private HttpClient client = new HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         public FootballDataService(IConfiguration configuration)
         {
-            client.DefaultRequestHeaders.Add("X-Auth-Token", configuration["Tokens:FootballDataServiceToken"]);
+            if (!client.DefaultRequestHeaders.Any())
+                client.DefaultRequestHeaders.Add("X-Auth-Token", configuration["Tokens:FootballDataServiceToken"]);
         }
 
         public async Task<Standings> ObterClassificacaoPorCompeticao(int competicaoId)
@@ -40,9 +42,7 @@ namespace Way2.FootballRankings.Business.Services
 
         public async Task<Competition> ObterCompeticaoPorId(int competicaoId)
         {
-            const string FILTER = "?id=";
-
-            var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}{FILTER}{competicaoId.ToString()}");
+            var response = await client.GetAsync($"{URL}{COMPETITION_PARAM}/{competicaoId.ToString()}");
             var competition = new Competition();
             if (response.StatusCode.Equals(HttpStatusCode.OK))
             {
