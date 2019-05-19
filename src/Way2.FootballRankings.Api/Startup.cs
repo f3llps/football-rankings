@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Way2.FootballRankings.Api.Configurations;
 using Swashbuckle.AspNetCore.Swagger;
@@ -38,7 +37,6 @@ namespace Way2.FootballRankings.Api
             services.WebApiConfig();
 
             services.ResolveDependencies();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using Way2.FootballRankings.Business.Models;
 
 namespace Way2.FootballRankings.Api.ViewModels
