@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Way2.FootballRankings.Api.ViewModels;
@@ -23,6 +24,7 @@ namespace Way2.FootballRankings.Api.Controllers
         }
 
         [HttpGet]
+        [EnableCors("Development")]
         public async Task<ActionResult<IEnumerable<CompetitionViewModel>>> ObterTodasCompeticoes()
         {
             // 5 Minutos de cache
