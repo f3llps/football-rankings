@@ -1,4 +1,5 @@
-﻿#  Football API 
+﻿#  Football Rankings API 
+#  Football Rankings API 
 O projeto foi elaborado por Fellipe Versiani, com as seguintes tecnologias: HTML5, CSS3 e Javascript com o Visual Code (frontend) e C# ASP.NET API CORE 2.2 com Visual Studio 2019 (backend)
 
 ### Screenshots
