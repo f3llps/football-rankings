@@ -1,16 +1,16 @@
 ﻿using FluentAssertions;
 using System.Threading.Tasks;
-using Way2.FootballRankings.Business.Services;
+using FootballRankings.Business.Services;
 using Xunit;
 
-namespace Way2.FootballRankings.Tests.Services
+namespace FootballRankings.Tests.Services
 {
     public class FootballDataServiceTests
     {
         private readonly FootballDataService _footballDataService;
 
         public FootballDataServiceTests()
-        {          
+        {
             _footballDataService = new FootballDataService();
         }
 
@@ -31,13 +31,5 @@ namespace Way2.FootballRankings.Tests.Services
             result.Should().NotBeNull("O id obrigatoriamente deve existir");
         }
 
-        //[Theory]
-        //[InlineData(2013)] //Serie A
-        //[InlineData(2021)] //Premier League
-        //public async Task ObterCompeticaoPorId_DeveriaRetornarExatamenteUmaCompeticao(int competicaoId)
-        //{
-        //    var result = await _footballDataService.ObterCompeticaoPorId(competicaoId);
-        //    result.Should().NotBeNull("O id obrigatoriamente deve existir");
-        //}
     }
 }

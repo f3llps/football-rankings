@@ -1,32 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Way2.Football.Api", "src\Way2.Football.Api\Way2.Football.Api.csproj", "{63881D05-01A5-4B7B-97B5-DADF5F1A48A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Football.Api", "src\Football.Api\Football.Api.csproj", "{63881D05-01A5-4B7B-97B5-DADF5F1A48A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Way2.Football.Business", "src\Way2.Football.Business\Way2.Football.Business.csproj", "{98AF37CE-4CDE-41CC-9F58-C3F2BCE593F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Football.Business", "src\Football.Business\Football.Business.csproj", "{98AF37CE-4CDE-41CC-9F58-C3F2BCE593F1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Way2.Football.Tests", "tests\Way2.Football.Tests\Way2.Football.Tests.csproj", "{50752B1A-2383-439F-80E3-69F923A3B13A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Football.Tests", "tests\Football.Tests\Football.Tests.csproj", "{50752B1A-2383-439F-80E3-69F923A3B13A}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Way2.Football.Web", "src\Way2.Football.Web\", "{68EE8C36-DD86-4D50-9E1B-164B4249A781}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Football.Web", "src\Football.Web\", "{68EE8C36-DD86-4D50-9E1B-164B4249A781}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49990"
-		Debug.AspNetCompiler.PhysicalPath = "src\Way2.Football.Web\"
+		Debug.AspNetCompiler.PhysicalPath = "src\Football.Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49990\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_49990"
-		Release.AspNetCompiler.PhysicalPath = "src\Way2.Football.Web\"
+		Release.AspNetCompiler.PhysicalPath = "src\Football.Web\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49990\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49990"
+		SlnRelativePath = "src\Football.Web\"
 	EndProjectSection
 EndProject
 Global
