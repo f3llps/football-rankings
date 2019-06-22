@@ -25,7 +25,7 @@ O projeto foi elaborado por Fellipe Versiani, com as seguintes tecnologias: HTML
 │   └── Football.Web
 ├── tests
 │   └── Football.Tests
-├── Readme.md
+├── README.md
 └── Football.sln
 ```
 ## 1. Instruções especiais para build:

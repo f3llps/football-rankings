@@ -262,3 +262,4 @@ __pycache__/
 
 # Node
 [Nn]ode_modules/
+*.eslintrc
