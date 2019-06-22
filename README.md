@@ -4,9 +4,10 @@ O projeto foi elaborado por Fellipe Versiani, com as seguintes tecnologias: HTML
 
 ### Screenshots
 
-- Versões Mobile (Iphone 8 Plus):<p align="center">
-  <img src="https://cdn1.imggmi.com/uploads/2019/5/24/2b2cee8847685a5cf94974f75bed670b-full.png" width="350"/>
-  <img src="https://cdn1.imggmi.com/uploads/2019/5/24/f7539beb2ea77e5bd416e7856169e4da-full.png" width="350"/>
+- Versões Mobile (Iphone 8 Plus):
+<p align="center">
+  <img src="https://i.ibb.co/KVtVvx4/2b2cee8847685a5cf94974f75bed670b-full.png" width="350"/>
+  <img src="https://i.ibb.co/b2YrQk4/f7539beb2ea77e5bd416e7856169e4da-full.png" width="350"/>
 </p>
 
 ### Estrutura dos arquivos
