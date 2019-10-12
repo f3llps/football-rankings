@@ -4,10 +4,10 @@ O projeto foi elaborado por Fellipe Versiani, com as seguintes tecnologias: HTML
 
 ### Screenshots
 
-
-- Versões Mobile (Iphone 8 Plus):<p align="center">
-  <img src="https://cdn1.imggmi.com/uploads/2019/5/24/2b2cee8847685a5cf94974f75bed670b-full.png" width="350"/>
-  <img src="https://cdn1.imggmi.com/uploads/2019/5/24/f7539beb2ea77e5bd416e7856169e4da-full.png" width="350"/>
+- Versões Mobile (Iphone 8 Plus):
+<p align="center">
+  <img src="https://i.ibb.co/KVtVvx4/2b2cee8847685a5cf94974f75bed670b-full.png" width="350"/>
+  <img src="https://i.ibb.co/b2YrQk4/f7539beb2ea77e5bd416e7856169e4da-full.png" width="350"/>
 </p>
 
 ### Estrutura dos arquivos
@@ -28,84 +28,71 @@ O projeto foi elaborado por Fellipe Versiani, com as seguintes tecnologias: HTML
 ├── README.md
 └── Football.sln
 ```
+
 ## 1. Instruções especiais para build:
 **1.1** Para executar a API desenvolvida acesse o diretório **Football.Api** por meio de um terminal e execute o seguinte comando:
 >dotnet run
 
- Isto fará com que a API funcione  por padrão na porta **http://localhost:5001**
+ Isto fará com que a API funcione na porta **http://localhost:5001**
 
-**1.2** Acesse o diretório **Fotball.Web** e para instalar as dependências do projeto front end execute:
+**1.2** Acesse o diretório **Football.Web** e para instalar as dependências do projeto front end execute:
 >npm install
 
 **1.3** Para executar um servidor para o front end execute:
->http-server
-
-A página estará disponível em qualquer um dos links listados no output do terminal após execução do comando, no path /index. Ex: **http://127.0.0.0/index**
+>npm run dev
 
 ## 2. Outros:
 
-### 1. Trabalhos futuros
+### 2.1. Trabalhos futuros
 
-Melhorar testes implementados com xUnit; 
-Rrealizar testes de interface com C# Selenium Webdriver (https://www.seleniumhq.org/projects/webdriver/); 
-Realizar testes com o Mocha (https://mochajs.org/) em conjunto com Chai Assertions (https://www.chaijs.com/);
-Utilizar decorador para realizar o cache server side, facilitando a leitura ao "limpar" o código, como também replicar para outros métodos, permitindo maior perfomance à aplicação. 
-Apenas em caso do projeto tender a crescer, refator da arquitetura do frontend, reimplementando o código com auxílio de um framework/library como Angular 2+, React ou  Vue, ferramentas já consolidadas no mercado. 
+- Melhorar testes implementados com xUnit; 
+- Realizar testes de interface com C# Selenium Webdriver (https://www.seleniumhq.org/projects/webdriver/); 
+- Realizar testes com o Mocha (https://mochajs.org/) em conjunto com Chai Assertions (https://www.chaijs.com/);
+- Utilizar decorador para realizar o cache server side, facilitando a leitura ao "limpar" o código, como também replicar para outros métodos, permitindo maior perfomance à aplicação. 
+- Apenas em caso do projeto tender a crescer, refatorar a arquitetura do frontend, reimplementando o código com auxílio de um framework/library como Angular 2+, React ou  Vue, ferramentas já consolidadas no mercado. 
 
-### 2. Tecnologias
+### 2.2. Tecnologias
 
 Para o desenvolvimento deste projeto foram utilizadas, em resumo, as seguintes tecnologias:
 - Para o frontend: 
 	- HTML5 e CSS3 (Sass) - Utilização da metodologia BEM e CSS Grid (descartando utilização do Bootstrap, por exemplo), obtendo um código com maior clareza e um layout responsivo.	
 	- **"Vanilla" Javascript (JS puro)**
 
-O motivo de não escolher um framework moderno, tal como **Angular 2+, React ou Vue** foi devido as mínimas funcionabilidades existentes no frontend para a solução que foi apresentada.
-Em resumo não foi necessário implementar CRUDS complexos, troca de mensagens entre componentes ou alguma outra feature atrelada aos framweworks modernos que pudesse agregar muito valor ao projeto. 
-Outro ponto especificamente, é que objetivei aprimorar conhecimentos em Javascript, o que pode auxiliar no desenvolvimento, seja qual for o framework JS utilizado no frontend.
-	
-	
+O motivo de não escolher um framework moderno, tal como **Angular 2+, React ou Vue** foi devido as mínimas funcionabilidades existentes no front end para a solução que foi apresentada. Em resumo não foi necessário implementar CRUDS complexos, troca de mensagens entre componentes ou alguma outra feature atrelada aos framweworks modernos que pudesse agregar muito valor ao projeto. Outro ponto especificamente, é que objetivei aprimorar conhecimentos em Javascript.
+		
 - Para o backend: 
 	- **C# ASP .NET CORE 2.2 - Template API**
----
-
-**Além disso, diversas bibliotecas de terceiros foram utilizadas, entre elas:**
+	
+Além disso, diversas bibliotecas de terceiros foram utilizadas, entre elas:
 
 ### Node JS
 Facilitar instalação do compilador Sass e http-server, bem como download dessas dependências <br/>
 https://github.com/nodejs/node
----
 
 ### Newtonsoft.Json 12.0.2
 Realizar parser do JSON consumido da APi FootballData.org <br/>
 https://www.newtonsoft.com/json
----
 
 ### xUnit 2.4.1
 Facilitar o desenvolvimento de testes <br/>
 https://github.com/xunit/xunit
----
 
 ### Material Design 3.0.0
 Melhorar a UI para o usuário <br/>
 https://github.com/material-components/material-components-web/
----
 
 ### Toastify JS 
 Melhorar a UX do usuário <br/>
 https://apvarun.github.io/toastify-js/
----
 
 ### Autommaper 6.1.0
 Auxiliar na arquitetura das ViewModels/DTO's <br/>
 https://github.com/AutoMapper/AutoMapper
----
 
 ### FluentAssertions 5.6.0
 Melhorar e facilitar o entendimento do código <br/>
 https://github.com/fluentassertions
----
 
 ### Swagger 4.0.1
 Documentar a aplicação <br/>
 https://github.com/swagger-api/swagger-core
----
