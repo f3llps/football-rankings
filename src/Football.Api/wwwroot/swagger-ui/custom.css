@@ -1,0 +1,21 @@
+.swagger-ui .opblock-body pre .headerline
+{
+    width:600px !important;
+}
+
+.swagger-ui textarea {
+    width:600px !important;
+}
+
+.topbar {
+    background-color: #00ff90;
+}
+
+.swagger-ui .opblock.opblock-get .opblock-summary {
+    border-color: #00ff90 !important;
+}
+
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+    background: #00ff90 !important;
+}
+

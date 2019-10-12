@@ -32,6 +32,9 @@ namespace FootballRankings.Api
                         Url = "https://www.linkedin.com/in/f3llps/"
                     }
                 });
+
+                
+
             });
 
             services.WebApiConfig();
@@ -46,9 +49,14 @@ namespace FootballRankings.Api
             app.UseSwaggerUI(s =>
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "API FootballRankings");
+                s.InjectStylesheet("/swagger-ui/custom.css");
+                s.InjectJavascript("/swagger-ui/custom.js");
+                //s.RoutePrefix = string.Empty;
             });
-
+            
+            //app.UseStaticFiles();
             app.UseMvcConfig(env);
+
         }
     }
 }
